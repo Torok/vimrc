@@ -1,5 +1,5 @@
 temp_dirs/undodir*
 temp_dirs/yankring_history_v2.txt
-sources_non_forked/YankRing/doc/tags
+sources_non_forked/YankRing.vim/doc/tags
 sources_non_forked/tlib/doc/tags
 my_configs.vim
