@@ -46,7 +46,7 @@
 [submodule "sources_non_forked/vim-desert256"]
 	path = sources_non_forked/vim-desert256
     url = https://github.com/brafales/vim-desert256.git
-[submodule "sources_non_forked/vim-expand-region/"]
+[submodule "sources_non_forked/vim-expand-region"]
 	path = sources_non_forked/vim-expand-region
     url = https://github.com/terryma/vim-expand-region.git
 [submodule "sources_non_forked/vim-fugitive"]
@@ -63,7 +63,7 @@
     url = https://github.com/therubymug/vim-pyte.git
 [submodule "sources_non_forked/vim-sean"]
 	path = sources_non_forked/vim-sean
-    url = origin	https://github.com/vim-scripts/sean.vim.git
+    url = https://github.com/vim-scripts/sean.vim.git
 [submodule "sources_non_forked/vim-snipmate"]
 	path = sources_non_forked/vim-snipmate
     url = https://github.com/garbas/vim-snipmate.git
