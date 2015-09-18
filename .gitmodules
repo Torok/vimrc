@@ -1,34 +1,34 @@
-[submodule "ack.vim"]
+[submodule "sources_non_forked/ack.vim"]
     path = sources_non_forked/ack.vim
     url = https://github.com/mileszs/ack.vim.git
-[submodule "bufexplorer"]
+[submodule "sources_non_forked/bufexplorer"]
     path = sources_non_forked/bufexplorer
     url = https://github.com/jlanzarotta/bufexplorer.git
 [submodule "sources_non_forked/cscope_maps"]
 	path = sources_non_forked/cscope_maps
 	url = https://github.com/chazy/cscope_maps.git
-[submodule "ctrlp.vim"]
+[submodule "sources_non_forked/ctrlp.vim"]
     path = sources_non_forked/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim.git
-[submodule "mayansmoke"]
+[submodule "sources_non_forked/mayansmoke"]
     path = sources_non_forked/mayansmoke
     url = https://github.com/vim-scripts/mayansmoke.git
-[submodule "mru.vim"]
+[submodule "sources_non_forked/mru.vim"]
     path = sources_non_forked/mru.vim
     url = https://github.com/vim-scripts/mru.vim.git
-[submodule "nerdtree"]
+[submodule "sources_non_forked/nerdtree"]
     path = sources_non_forked/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
-[submodule "open_file_under_cursor.vim"]
+[submodule "sources_non_forked/open_file_under_cursor.vim"]
     path = sources_non_forked/open_file_under_cursor.vim
     url = https://github.com/amix/open_file_under_cursor.vim.git
-[submodule "snipmate-snippets"]
+[submodule "sources_non_forked/snipmate-snippets"]
     path = sources_non_forked/snipmate-snippets
     url = https://github.com/scrooloose/snipmate-snippets.git
 [submodule "sources_non_forked/syntastic"]
 	path = sources_non_forked/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "taglist"]
+[submodule "sources_non_forked/taglist"]
     path = sources_non_forked/taglist
     url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "sources_non_forked/tlib"]
