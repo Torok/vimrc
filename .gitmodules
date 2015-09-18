@@ -10,9 +10,11 @@
 [submodule "sources_non_forked/ctrlp.vim"]
     path = sources_non_forked/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim.git
+    ignore = dirty
 [submodule "sources_non_forked/mayansmoke"]
     path = sources_non_forked/mayansmoke
     url = https://github.com/vim-scripts/mayansmoke.git
+    ignore = dirty
 [submodule "sources_non_forked/mru.vim"]
     path = sources_non_forked/mru.vim
     url = https://github.com/vim-scripts/mru.vim.git
@@ -22,6 +24,7 @@
 [submodule "sources_non_forked/open_file_under_cursor.vim"]
     path = sources_non_forked/open_file_under_cursor.vim
     url = https://github.com/amix/open_file_under_cursor.vim.git
+    ignore = dirty
 [submodule "sources_non_forked/snipmate-snippets"]
     path = sources_non_forked/snipmate-snippets
     url = https://github.com/scrooloose/snipmate-snippets.git
@@ -31,6 +34,7 @@
 [submodule "sources_non_forked/taglist"]
     path = sources_non_forked/taglist
     url = https://github.com/vim-scripts/taglist.vim.git
+    ignore = dirty
 [submodule "sources_non_forked/tlib"]
 	path = sources_non_forked/tlib
     url = https://github.com/tomtom/tlib_vim.git
@@ -49,6 +53,7 @@
 [submodule "sources_non_forked/vim-expand-region"]
 	path = sources_non_forked/vim-expand-region
     url = https://github.com/terryma/vim-expand-region.git
+    ignore = dirty
 [submodule "sources_non_forked/vim-fugitive"]
 	path = sources_non_forked/vim-fugitive
     url = https://github.com/tpope/vim-fugitive.git
@@ -73,6 +78,8 @@
 [submodule "sources_non_forked/vim-surround"]
 	path = sources_non_forked/vim-surround
     url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
 [submodule "sources_non_forked/YankRing.vim"]
 	path = sources_non_forked/YankRing.vim
     url = https://github.com/vim-scripts/YankRing.vim.git
+    ignore = dirty
