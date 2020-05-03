@@ -1,3 +1,6 @@
+[submodule "sources_non_forked/ale"]
+	path = sources_non_forked/ale
+	url = https://github.com/dense-analysis/ale.git
 [submodule "sources_non_forked/ack.vim"]
     path = sources_non_forked/ack.vim
     url = https://github.com/mileszs/ack.vim.git
@@ -9,7 +12,7 @@
 	url = https://github.com/chazy/cscope_maps.git
 [submodule "sources_non_forked/ctrlp.vim"]
     path = sources_non_forked/ctrlp.vim
-    url = https://github.com/kien/ctrlp.vim.git
+    url = https://github.com/ctrlpvim/ctrlp.vim.git
     ignore = dirty
 [submodule "sources_non_forked/mayansmoke"]
     path = sources_non_forked/mayansmoke
@@ -31,10 +34,6 @@
 [submodule "sources_non_forked/syntastic"]
 	path = sources_non_forked/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "sources_non_forked/taglist"]
-    path = sources_non_forked/taglist
-    url = https://github.com/vim-scripts/taglist.vim.git
-    ignore = dirty
 [submodule "sources_non_forked/tlib"]
 	path = sources_non_forked/tlib
     url = https://github.com/tomtom/tlib_vim.git
@@ -57,9 +56,6 @@
 [submodule "sources_non_forked/vim-fugitive"]
 	path = sources_non_forked/vim-fugitive
     url = https://github.com/tpope/vim-fugitive.git
-[submodule "sources_non_forked/vim-markdown"]
-	path = sources_non_forked/vim-markdown
-    url = https://github.com/tpope/vim-markdown.git
 [submodule "sources_non_forked/vim-multiple-cursors"]
 	path = sources_non_forked/vim-multiple-cursors
     url = https://github.com/terryma/vim-multiple-cursors.git
@@ -79,7 +75,39 @@
 	path = sources_non_forked/vim-surround
     url = https://github.com/tpope/vim-surround.git
     ignore = dirty
-[submodule "sources_non_forked/YankRing.vim"]
-	path = sources_non_forked/YankRing.vim
-    url = https://github.com/vim-scripts/YankRing.vim.git
-    ignore = dirty
+[submodule "sources_non_forked/auto-pairs"]
+	path = sources_non_forked/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "sources_non_forked/goyo"]
+	path = sources_non_forked/goyo
+	url = https://github.com/junegunn/goyo.vim
+[submodule "sources_non_forked/gruvbox"]
+	path = sources_non_forked/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "sources_non_forked/lightline-ale"]
+	path = sources_non_forked/lightline-ale
+	url = https://github.com/maximbaz/lightline-ale
+[submodule "sources_non_forked/tabular"]
+	path = sources_non_forked/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "sources_non_forked/lightline.vim"]
+	path = sources_non_forked/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "sources_non_forked/vim-commentary"]
+	path = sources_non_forked/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "sources_non_forked/vim-gitgutter"]
+	path = sources_non_forked/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "sources_non_forked/vim-lastplace"]
+	path = sources_non_forked/vim-lastplace
+	url = https://github.com/farmergreg/vim-lastplace.git
+[submodule "sources_non_forked/vim-markdown"]
+	path = sources_non_forked/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
+[submodule "sources_non_forked/vim-zenroom2"]
+	path = sources_non_forked/vim-zenroom2
+	url = https://github.com/amix/vim-zenroom2
+[submodule "sources_non_forked/vim-yankstack"]
+	path = sources_non_forked/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack

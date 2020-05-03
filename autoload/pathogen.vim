@@ -96,7 +96,10 @@ function! pathogen#is_disabled(path) abort
     return 1
   endif
   let sep = pathogen#slash()
-  let blacklist = get(g:, 'pathogen_blacklist', get(g:, 'pathogen_disabled', [])) + pathogen#split($VIMBLACKLIST)
+  let blacklist = map(
+        \ get(g:, 'pathogen_blacklist', get(g:, 'pathogen_disabled', [])) +
+        \ pathogen#split($VIMBLACKLIST),
+        \ 'substitute(v:val, "[\\/]$", "", "")')
   return index(blacklist, fnamemodify(a:path, ':t')) != -1 || index(blacklist, a:path) != -1
 endfunction "}}}1
 
@@ -342,4 +345,3 @@ command! -bar -bang -range=1 -nargs=1 -complete=customlist,s:Findcomplete Vpedit
 command! -bar -bang -range=1 -nargs=1 -complete=customlist,s:Findcomplete Vread    :execute s:find(<count>,'read',<q-args>,<bang>1)
 
 " vim:set et sw=2 foldmethod=expr foldexpr=getline(v\:lnum)=~'^\"\ Section\:'?'>1'\:getline(v\:lnum)=~#'^fu'?'a1'\:getline(v\:lnum)=~#'^endf'?'s1'\:'=':
-
