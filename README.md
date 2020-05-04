@@ -16,17 +16,19 @@ I would, of course, recommend using the awesome version.
 ### Install for your own user only
 The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following from your terminal:
 
-	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+	git clone --depth=1 https://github.com/Torok/vimrc.git ~/.vim_runtime
+	git submodule update --force --recursive --init --remote
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
-	
+
 ### Install for multiple users
 To install for multiple users, the repository needs to be cloned to a location accessible for all the intended users.
 
-	git clone --depth=1 https://github.com/amix/vimrc.git /opt/vim_runtime
+	git clone --depth=1 https://github.com/Torok/vimrc.git /opt/vim_runtime
+	git submodule update --force --recursive --init --remote
 	sh ~/.vim_runtime/install_awesome_parameterized.sh /opt/vim_runtime user0 user1 user2
 	# to install for all users with home directories
 	sh ~/.vim_runtime/install_awesome_parameterized.sh /opt/vim_runtime --all
-	
+
 Naturally, `/opt/vim_runtime` can be any directory, as long as all the users specified have read access.
 
 ## Fonts
@@ -44,7 +46,8 @@ The basic version is just one file and no plugins. Just copy [basic.vim](https:/
 
 The basic version is useful to install on remote servers where you don't need many plugins, and you don't do many edits.
 
-	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+	git clone --depth=1 https://github.com/Torok/vimrc.git ~/.vim_runtime
+	git submodule update --force --recursive --init --remote
 	sh ~/.vim_runtime/install_basic_vimrc.sh
 
 
@@ -64,8 +67,20 @@ Just do a git rebase!
 
     cd ~/.vim_runtime
     git pull --rebase
-    python update_plugins.py
+    cd sources_non_forked
+    ./update.sh
 
+## How to remove submodule
+
+To remove a submodule you need to :
+
+- Delete the relevant section from the .gitmodules file.
+- Stage the .gitmodules changes  `git add .gitmodules`
+- Delete the relevant section from .git/config.
+- Run `git rm --cached path_to_submodule` (no trailing slash).
+- Run `rm -rf .git/modules/path_to_submodule` (no trailing slash).
+- Commit `git commit -m "Removed submodule "`
+- Delete the now untracked submodule files `rm -rf path_to_submodule`
 
 ## Some screenshots
 
@@ -97,7 +112,6 @@ I recommend reading the docs of these plugins to understand them better. Each pl
 * [ale](https://github.com/w0rp/ale): Syntax and lint checking for vim (ALE requires NeoVim >= 0.2.0 or Vim 8 with +timers +job +channel)
 * [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.
 * [vim-expand-region](https://github.com/terryma/vim-expand-region): Allows you to visually select increasingly larger regions of text using the same key combination
-* [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): Sublime Text style multiple selections for Vim, CTRL+N is remapped to CTRL+S (due to YankRing)
 * [surround](https://github.com/tpope/vim-surround.git): Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.  The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 * [vim-airline](https://github.com/bling/vim-airline.git) Lean & mean status/tabline for vim that's light as air (replacing powerline)
@@ -151,34 +165,34 @@ Treat long lines as break lines (useful when moving around in them):
 
 	map j gj
 	map k gk
-	
+
 Map `<Space>` to `/` (search) and `<Ctrl>+<Space>` to `?` (backwards search):
-	
+
 	map <space> /
 	map <C-space> ?
 	map <silent> <leader><cr> :noh<cr>
 
 Disable highlights when you press `<leader><cr>`:
-	
+
 	map <silent> <leader><cr> :noh<cr>
 
 Smart way to move between windows (`<ctrl>j` etc.):
-	
+
 	map <C-j> <C-W>j
 	map <C-k> <C-W>k
 	map <C-h> <C-W>h
 	map <C-l> <C-W>l
 
 Closing of the current buffer(s) (`<leader>bd` and (`<leader>ba`)):
-	
+
 	" Close current buffer
 	map <leader>bd :Bclose<cr>
 	
 	" Close all buffers
 	map <leader>ba :1,1000 bd!<cr>
-	
+
 Useful mappings for managing tabs:
-	
+
 	map <leader>tn :tabnew<cr>
 	map <leader>to :tabonly<cr>
 	map <leader>tc :tabclose<cr>
@@ -187,21 +201,21 @@ Useful mappings for managing tabs:
 	" Opens a new tab with the current buffer's path
 	" Super useful when editing files in the same directory
 	map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
-	
+
 Switch [CWD](http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file) to the directory of the open buffer:
-	
+
 	map <leader>cd :cd %:p:h<cr>:pwd<cr>
-	
+
 Open `ack.vim` for fast search:
-	
+
 	map <leader>g :Ack 
 
 Quickly open a buffer for scripbble:
-	
+
 	map <leader>q :e ~/buffer<cr>
 
 Toggle paste mode on and off:
-	
+
 	map <leader>pp :setlocal paste!<cr>
 
 
@@ -258,7 +272,7 @@ Bash like keys for the command line:
     cnoremap <C-A>		<Home>
     cnoremap <C-E>		<End>
     cnoremap <C-K>		<C-U>
-
+    
     cnoremap <C-P> <Up>
     cnoremap <C-N> <Down>
 
@@ -270,7 +284,7 @@ Write the file as sudo (works only on Unix). Super useful when you open a file a
 ### Plugin related mappings
 
 Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) to see and manage the current buffers (`<leader>o`):
-    
+ 
     map <leader>o :BufExplorer<cr>
 
 Open [MRU.vim](https://github.com/vim-scripts/mru.vim) to see the recently open files (`<leader>f`):
@@ -278,7 +292,7 @@ Open [MRU.vim](https://github.com/vim-scripts/mru.vim) to see the recently open 
     map <leader>f :MRU<CR>
 
 Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin to quickly find a file or a buffer (`<leader>j` or `<ctrl>f`):
-    
+ 
     let g:ctrlp_map = '<C-f>'
 
 [NERD Tree](https://github.com/scrooloose/nerdtree) mappings:
